@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PowerFit Studio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏋️</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-900">
     
-    <header class="flex items-center justify-between px-8 py-4 bg-white shadow-md">
+    <header class="flex items-center justify-between px-8 py-4 bg-white shadow-md top-0 sticky z-20">
         <!-- Logo -->
          <div class="text-2xl font-bold text-blue-600">
             PowerFit
@@ -28,7 +29,7 @@
            </a>
     </header>
 
-    <section id="home" class="relative bg-cover bg-center h-[600px] flex items-center"
+    <section id="home" class="relative bg-cover bg-center h-[600px] flex items-center z-10"
         style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80');">
     
         <div class="max-w-2xl mx-auto text-center text-white px-4">
@@ -133,6 +134,54 @@
         </div>
     </section>
 
+    <section class="bg-blue-600 py-16 px-8 text-center text-white">
+        <h2 class="text-3xl font-bold mb-3">Stay in the Loop</h2>
+        <p class="mb-8 text-blue-100">Get workout tips, class schedules, and exclusive offers straight to your inbox</p>
+
+    <form id="newsletter-form" action="https://formspree.io/f/xqpaljje" method="POST"
+            class="flex flex-col sm:flex-raw gap-3 max-w-md mx-auto">
+        <input type="email" name="email" required placeholder="Enter your Email"
+            class="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300">
+        <button type="submit"
+            class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">
+            Subscribe
+        </button>
+    </form>
+
+    <p id="form-message" class="mt-4 text-blue-100 hidden"></p>
+
+    <script>
+    const form = document.getElementById('newsletter-form');
+    const message = document.getElementById('form-message');
+
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault(); // stop the normal page redirect
+
+        const data = new FormData(form);
+
+        try {
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+            message.textContent = "Thanks for subscribing! 🎉";
+            message.classList.remove('hidden');
+            form.reset(); // clears the input field
+        } else {
+            message.textContent = "Oops, something went wrong. Please try again.";
+            message.classList.remove('hidden');
+        }
+        } catch (error) {
+        message.textContent = "Oops, something went wrong. Please try again.";
+        message.classList.remove('hidden');
+        }
+    });
+    </script>
+    </section>
+
     <footer id="contact" class="bg-gray-900 text-gray-300 py-12 px-8">
         
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
@@ -148,7 +197,7 @@
                 <h3 class="text-lg font-semibold text-white mb-3">Contact</h3>
                 <p>66111 Hauptbahnhof, Saarbrücken</p>
                 <p>info@powerfit.com</p>
-                <p>+4915901617675</p>
+                <p>+49 123 456 789</p>
               </div>
 
               <!-- Social -->
