@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerFit Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    
+    <header class="flex items-center justify-between px-8 py-4 bg-white shadow-md">
+        <!-- Logo -->
+         <div class="text-2xl font-bold text-blue-600">
+            PowerFit
+         </div>
+
+         <!-- Navigation Links -->
+          <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
+            <a href="#home" class="hover:text-blue-600">Home</a>
+            <a href="#courses" class="hover:text-blue-600">Courses</a>
+            <a href="#pricing" class="hover:text-blue-600">Pricing</a>
+            <a href="#contact" class="hover:text-blue-600">Contact</a>
+          </nav>
+
+          <!-- CTA Button -->
+           <a href="#pricing" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+            Sign up now
+           </a>
+    </header>
+
+    <section id="home" class="relative bg-cover bg-center h-[600px] flex items-center"
+        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80');">
+    
+        <div class="max-w-2xl mx-auto text-center text-white px-4">
+            <h1 class="text-5xl font-extrabold mb-4">
+                Transform Your Body. Transform Your Life.
+            </h1>
+            <p class="text-xl mb-8">
+                Join PowerFit Studio and get access to top equipment, expert trainers, and a community that keeps you motivated
+            </p>
+            <a href="#pricing" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition">
+                Start Your Free Trial
+            </a>
+        </div>
+        
+    </section>
+
+    <section id="courses" class="py-20 px-8 max-w-6xl mx-auto">
+        
+        <h2 class="text-3xl font-bold text-center mb-12">Why Choose PowerFit</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- Card 1 -->
+             <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-xl transition">
+                <div class="text-4xl mb-4">🏋️</div>
+                <h3 class="text-xl font-semibold mb-2">Modern Equipment</h3>
+                <p class="text-gray-600">State-of-the-art Machines and free weights for every fitness level.</p>
+             </div>
+
+             <!-- Card 2 -->
+              <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-xl transition">
+                <div class="text-4xl mb-4">🧑‍🏫</div>
+                <h3 class="text-xl font-semibold mb-2">Expert Trainers</h3>
+                <p class="text-gray-600">Certified coaches to guide and motivate you every step of the way.</p>
+              </div>
+
+              <!-- Card 3 -->
+               <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-xl transition">
+                <div class="text-4xl mb-4">🧘</div>
+                <h3 class="text-xl font-semibold mb-2">Group Classes</h3>
+                <p class="text-gray-600">Yoga, HIIT, Spinning and more -- something for everyone.</p>
+               </div>
+
+               <!-- Card 4 -->
+                <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-xl transition">
+                    <div class="text-4xl mb-4">⏰</div>
+                    <h3 class="text-xl font-semibold mb-2">Open 24/7</h3>
+                    <p class="text-gray-600">Train whenever it fits your schedule, day or night.</p>
+                </div>
+
+        </div>
+    </section>
+
+    <section id="pricing" class="py-20 px-8 bg-gray-100">
+
+        <h2 class="text-3xl font-bold text-center mb-12">Choose Your Plan</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+            <!-- Basic -->
+             <div class="bg-white rounded-xl shadow-md p-8 text-center">
+                <h3 class="text-xl font-semibold mb-2">Basic</h3>
+                <p class="text-4xl font-bold mb-4">$29<span class="text-lg font-normal">/mo</span></p>
+                <ul class="text-gray-600 mb-8 space-y-2">
+                    <li>Gym Access</li>
+                    <li>Locker Room</li>
+                    <li>1 free session</li>
+                </ul>
+                <a href="#" class="block bg-gray-200 hover:bg-gray-300 text-gray-900 py-3 rounded-lg font-semibold transition">
+                    Choose Basic
+                </a>
+             </div>
+
+             <!-- Premium (Highlighted)-->
+              <div class="bg-blue-600 text-white rounded-xl shadow-xl p-8 text-center scale-105">
+                <h3 class="text-xl font-semibold mb-2">Premium</h3>
+                <p class="text-4xl font-bold mb-4">$49<span class="text-lg font-normal">/mo</span></p>
+                <ul class="mb-8 space-y-2">
+                    <li>Everything in Basic</li>
+                    <li>All group classes</li>
+                    <li>1 trainer session/week</li>
+                </ul>
+                <a href="#" class="block bg-white text-blue-600 hover:bg-gray-100 py-3 rounded-lg font-semibold transition">
+                    Choose Premium
+                </a>    
+              </div>
+
+              <!-- Family -->
+               <div class="bg-white rounded-xl shadow-md p-8 text-center">
+                <h3 class="text-xl font-semibold mb-2">Family</h3>
+                <p class="text-4xl font-bold mb-4">$89<span class="text-lg font-normal">/mo</span></p>
+                <ul class="text-gray-600 mb-8 space-y-2">
+                    <li>Up to 4 members</li>
+                    <li>All Premium perks</li>
+                    <li>Free guest passes</li>
+                </ul>
+                <a href="#" class="block bg-gray-200 hover:bg-gray-300 text-gray-900 py-3 rounded-lg font-semibold transition">
+                    Choose Family
+                </a>
+               </div>
+
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-900 text-gray-300 py-12 px-8">
+        
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+
+            <!-- About -->
+             <div>
+                <h3 class="text-xl font-bold text-white mb-3">PowerFit</h3>
+                <p>Your neighborhood gym for strength, health, and community.</p>
+             </div>
+
+             <!-- Contact -->
+              <div>
+                <h3 class="text-lg font-semibold text-white mb-3">Contact</h3>
+                <p>66111 Hauptbahnhof, Saarbrücken</p>
+                <p>info@powerfit.com</p>
+                <p>+49 123 456 789</p>
+              </div>
+
+              <!-- Social -->
+               <div>
+                <h3 class="text-lg font-semibold text-white mb-3">Follow Us</h3>
+                <div class="flex justify-center md:justify-start space-x-4 text-2xl">
+                    <a href="#" class="hover:text-blue-500">📘</a>
+                    <a href="#" class="hover:text-pink-500">📷</a>
+                    <a href="#" class="hover:text-sky-400">🐦</a>
+                </div>
+               </div>
+
+        </div>
+
+        <p class="text-center text-gray-500 mt-10 text-sm">
+            &copy; 2026 PowerFit Studio. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
